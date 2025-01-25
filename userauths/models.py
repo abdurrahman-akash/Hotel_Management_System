@@ -26,7 +26,7 @@ class User(AbstractUser):
     full_name = models.CharField(max_length=150, null=True, blank=True)
     username = models.CharField(max_length=150, unique=True)
     email = models.EmailField(unique=True)
-    phone = models.CharField(max_length=15, null=True, blank=True)
+    phone = models.CharField(max_length=30, null=True, blank=True)
     gender = models.CharField(max_length=10, choices=GENDER, default='Other')
 
     otp = models.CharField(max_length=100, null=True, blank=True)
